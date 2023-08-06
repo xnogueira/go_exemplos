@@ -1,0 +1,29 @@
+{{ define "editar"}}
+{{ template "cabeca"}}
+<div class="card">
+    <div class="card-header">
+        Editar cadastro
+    </div>
+    <div class="card-body">
+        <form method="post" action="/atualizar">
+            <input type="hidden" name="id" id="id" value={{ .Id }}></input 
+
+            <div class="form-group">
+                <label for="">Nome:</label>
+                <input type="text" class="form-control"
+                    name="nome" id="nome" value={{ .Nome }}></input 
+            </div>
+
+            <div class="form-group">
+                <label for="">eMail:</label>
+                <input type="text" class="form-control"
+                    name="email" id="email"value={{ .Email }}></input 
+            </div>
+
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+            <a name="" id="" class="btn btn-info" href="/" role="button">Retornar</a>
+        </form>
+    </div>
+
+{{ template "rodape"}}
+{{ end}}
